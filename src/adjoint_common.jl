@@ -692,6 +692,7 @@ function out_and_ts(_ts, duplicate_iterator_times, sol)
     return out, ts
 end
 
+#=
 if !hasmethod(Zygote.adjoint,
     Tuple{Zygote.AContext, typeof(Zygote.literal_getproperty),
         SciMLBase.AbstractTimeseriesSolution, Val{:u}})
@@ -705,3 +706,4 @@ if !hasmethod(Zygote.adjoint,
         sol.u, solu_adjoint
     end
 end
+=#
